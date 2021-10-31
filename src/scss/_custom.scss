@@ -1,1 +1,29 @@
 // Here you can add other styles
+
+.text-danger {
+  color: theme-color("danger");
+}
+
+.text-primary {
+  color: theme-color("primary");
+}
+
+.text-success {
+  color: theme-color("success");
+}
+
+.text-warning {
+  color: theme-color("warning");
+}
+
+.text-info {
+  color: theme-color("info");
+}
+
+.text-light {
+  color: theme-color("light");
+}
+
+.text-dark {
+  color: theme-color("dark");
+}

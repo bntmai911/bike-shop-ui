@@ -51,16 +51,16 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'buttons',
-        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+        path: 'finance',
+        loadChildren: () => import('./page/finance/finance.module').then(m => m.FinanceModule)
       },
       {
-        path: 'charts',
-        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+        path: 'new-order',
+        loadChildren: () => import('./page/new-order/new-order.module').then(m => m.NewOrderModule)
       },
       {
         path: 'dashboard',
-        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+        loadChildren: () => import('./page/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
         path: 'icons',
@@ -84,7 +84,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) ],
+  imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}

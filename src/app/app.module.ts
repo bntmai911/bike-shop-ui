@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -42,9 +42,6 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
-import { NewOrderComponent } from './page/new-order/new-order.component';
-import { FinanceComponent } from './page/finance/finance.component';
-import { StorageComponent } from './page/storage/storage.component';
 
 @NgModule({
   imports: [
@@ -70,14 +67,11 @@ import { StorageComponent } from './page/storage/storage.component';
     P500Component,
     LoginComponent,
     RegisterComponent,
-    NewOrderComponent,
-    FinanceComponent,
-    StorageComponent
   ],
   providers: [
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
+      useClass: PathLocationStrategy
     },
     IconSetService,
   ],

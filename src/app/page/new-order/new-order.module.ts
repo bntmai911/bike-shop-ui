@@ -3,18 +3,18 @@ import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { FinanceRoutingModule } from './finance-routing.module';
-import { FinanceComponent } from './finance.component';
+import { NewOrderRoutingModule } from './new-order-routing.module';
+import { NewOrderComponent } from './new-order.component';
 
 
 @NgModule({
   imports: [
     FormsModule,
-    FinanceRoutingModule,
+    NewOrderRoutingModule,
     ChartsModule,
     BsDropdownModule,
     ButtonsModule.forRoot()
   ],
-  declarations: [ FinanceComponent ]
+  declarations: [ NewOrderComponent ]
 })
-export class FinanceModule { }
+export class NewOrderModule { }
